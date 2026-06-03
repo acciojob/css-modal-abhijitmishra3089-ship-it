@@ -1,1 +1,62 @@
 /*  your css code here. If applicable */
+ *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        font-family:Arial, sans-serif;
+        padding:40px;
+    }
+
+    #modal-toggle{
+        display:none;
+    }
+
+    #openModal{
+        display:inline-block;
+        padding:10px 20px;
+        background:#007bff;
+        color:white;
+        cursor:pointer;
+        border-radius:5px;
+    }
+
+    .modal{
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,0.5);
+        display:none;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .modal-content{
+        background:white;
+        width:400px;
+        border-radius:8px;
+        overflow:hidden;
+    }
+
+    .modal-header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px;
+        border-bottom:1px solid #ddd;
+    }
+
+    .modal-body{
+        padding:15px;
+    }
+
+    .close-modal{
+        font-size:22px;
+        cursor:pointer;
+    }
+
+    /* Open Modal */
+    #modal-toggle:checked ~ .modal{
+        display:flex;
+    }
